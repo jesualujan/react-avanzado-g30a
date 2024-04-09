@@ -1,4 +1,4 @@
-import logo from './logo.svg'
+import logo from '../../src/assets/react.svg'
 const ReactHookForm = () => {
   return (
     //* VA TODO NUESTRO DISEÑO HTML
