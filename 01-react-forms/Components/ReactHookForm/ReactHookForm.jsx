@@ -33,7 +33,10 @@ const ReactHookForm = () => {
     <div className='login'>
     <div className='login-container'>
       <img src={logo} alt='logo' />
-      <form onSubmit={handleSubmit(onSubmit)} style={{ display: 'flex', flexDirection: 'column' }}>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        style={{ display: 'flex', flexDirection: 'column' }}
+      >
       
         <label htmlFor='firstName'>Nombre</label>
         <input
@@ -41,8 +44,7 @@ const ReactHookForm = () => {
           name='firstName'
           placeholder='Tu Nombre'
           id='firstName'
-          {...register('firstName', { required: true, maxLength: 20})} 
-
+          {...register('firstName', {required: true, maxLength: 20})}
         />
         <p>{errors.firstName?.message}</p>
 
@@ -52,7 +54,7 @@ const ReactHookForm = () => {
           name='lastName'
           placeholder='Tu Apellido'
           id='lastName'
-          {...register('lastName', {pattern: /^[A-Za-z]+$/i })} 
+          {...register('lastName',{pattern: /^[A-Za-z]+$/i })}
         />
         <p>{errors.lastName?.message}</p>
 
@@ -62,9 +64,9 @@ const ReactHookForm = () => {
           name='age'
           placeholder='Tu Edad'
           id='age'
-          {...register('age')} 
+          {...register('age')}
         />
-         <p>{errors.age?.message}</p>
+        <p>{errors.age?.message}</p>
 
         <label htmlFor='gender'>Genero</label>
         <select name='gender' id='gender'>
@@ -81,7 +83,7 @@ const ReactHookForm = () => {
           name='email'
           placeholder='correo@mail.com'
           id='email'
-          {...register('email')} 
+          {...register('email')}
         />
         <p>{errors.email?.message}</p>
 
@@ -90,12 +92,12 @@ const ReactHookForm = () => {
           type='password'
           name='password'
           id='password'
-          {...register('password')} 
-          />
-          <p>{errors.password?.message}</p>
+          {...register('password')}
+        />
+        <p>{errors.password?.message}</p>
 
         <button type='submit'>
-          Iniciar Sesion
+          ENVIAR
         </button>
       </form>
     </div>
