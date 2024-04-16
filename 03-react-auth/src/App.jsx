@@ -1,9 +1,10 @@
 import './App.css'
+import Header from '@/Components/Header'
 
 function App () {
   return (
     <>
-      <h1> REACT AUTH </h1>
+      <Header />
     </>
   )
 }
