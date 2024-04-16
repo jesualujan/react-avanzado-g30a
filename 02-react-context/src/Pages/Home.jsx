@@ -2,10 +2,12 @@ import SongList from '@/Components/SongList/SongList'
 import SongDetail from '@/Components/SongDetail/SongDetail'
 import { SongProvider } from '@/Context/SongContex'
 import './home.css'
+import Header from '@/Components/Header'
 
 const Home = () => {
   return (
     <SongProvider>
+      <Header />
       <div className='home-container'>
         <div className='left'>
           <p>lado zquierdo</p>
