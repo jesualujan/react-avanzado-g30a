@@ -1,0 +1,10 @@
+.form-sing {
+    max-width: 330px;
+    padding: 1rem;
+}
+
+.form-sing input {
+    margin-bottom: 1px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
