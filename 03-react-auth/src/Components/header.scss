@@ -13,33 +13,34 @@ $menu-color: #3d3d3d;
 }
 
 // APLICANDO BEM EN SCSS
-.header{
+.header {
+    background-color: #dadada;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 15px;
+    padding: 15px 30px;
 
-    &__logo{
-        @include header-link;
+    &__logo {
+       @include header-link;
     }
 
-    &__nav-list{
+    &__nav-list {
         display: flex;
         list-style: none;
         column-gap: 20px;
         flex-wrap: wrap;
     }
-
+    
     &__item-link{
-       @include header-link;
+        @include header-link;
 
-       // indicamos cual es el estilo activo
-       &--is-active{
-           @include header-border($size: 3px)
-       }
+        //indicamos cual es el estilo activo
+        &--is-active {
+            @include header-border($size: 3px)
+        }
 
-       &:hover{
-        @include header-border()
-       }
+        &:hover{
+            @include header-border;
+        }
     }
 }
