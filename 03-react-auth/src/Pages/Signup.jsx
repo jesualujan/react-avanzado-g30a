@@ -1,8 +1,8 @@
 import '@/styles/form.css'
-import logo from '@/src/assets/react.svg'
+import logo from '@/assets/react.svg'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
-import { registerUserService } from '@/Service/userService'
+import { registerUserService } from '../Service/useService'
 const Signup = () => {
   const { register, handleSubmit, formState: { errors } } = useForm()
   const navigate = useNavigate()
@@ -36,7 +36,7 @@ const Signup = () => {
             placeholder='John'
             {...register('first_name')}
           />
-          {/* <p>{errors.first_name?.message}</p> */}
+          <p>{errors.first_name?.message}</p>
           <label htmlFor='first_name'>First Name</label>
         </div>
 
@@ -51,6 +51,7 @@ const Signup = () => {
             placeholder='Doe'
             {...register('last_name')}
           />
+          <p>{errors.last_name?.message}</p>
           <label htmlFor='last_name'>Last Name</label>
         </div>
 
@@ -63,6 +64,7 @@ const Signup = () => {
             onChange={() => {}}
             {...register('gender')}
           >
+            <p>{errors.gender?.message}</p>
             <option value=''>Choose...</option>
             <option value='M'>Male</option>
             <option value='F'>Female</option>
@@ -81,6 +83,7 @@ const Signup = () => {
             placeholder='name@example.com'
             {...register('email')}
           />
+          <p>{errors.email?.message}</p>
           <label htmlFor='email'>Email address</label>
         </div>
 
@@ -95,6 +98,7 @@ const Signup = () => {
             placeholder='Password'
             {...register('password')}
           />
+          <p>{errors.password?.message}</p>
           <label htmlFor='password'>Password</label>
         </div>
 
