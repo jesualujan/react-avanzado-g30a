@@ -31,8 +31,6 @@ const Signup = () => {
             className='form-control'
             id='first_name'
             name='first_name'
-            value=''
-            onChange={() => {}}
             placeholder='John'
             {...register('first_name')}
           />
@@ -46,8 +44,6 @@ const Signup = () => {
             className='form-control'
             id='last_name'
             name='last_name'
-            value=''
-            onChange={() => {}}
             placeholder='Doe'
             {...register('last_name')}
           />
@@ -60,8 +56,6 @@ const Signup = () => {
             className='form-select'
             id='gender'
             name='gender'
-            value=''
-            onChange={() => {}}
             {...register('gender')}
           >
             <p>{errors.gender?.message}</p>
@@ -78,8 +72,6 @@ const Signup = () => {
             className='form-control'
             id='email'
             name='email'
-            value=''
-            onChange={() => {}}
             placeholder='name@example.com'
             {...register('email')}
           />
@@ -93,8 +85,6 @@ const Signup = () => {
             className='form-control'
             id='password'
             name='password'
-            value=''
-            onChange={() => {}}
             placeholder='Password'
             {...register('password')}
           />
@@ -103,7 +93,7 @@ const Signup = () => {
         </div>
 
         <button className='w-100 btn btn-lg btn-primary' type='submit'>Sign up</button>
-        <p className='mt-5 mb-3 text-muted'>© 2017–2024</p>
+        <p className='mt-5 mb-3 text-muted'>© 2017–2022</p>
       </form>
     </main>
   )
