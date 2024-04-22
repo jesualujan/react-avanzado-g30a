@@ -2,7 +2,7 @@ import '@/styles/form.css'
 import logo from '@/assets/react.svg'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
-import { loginUserService } from '../Service/useService'
+import { loginUserService } from '@/Service/useService'
 
 const Login = () => {
   const { register, handleSubmit, formState: { errors } } = useForm()
