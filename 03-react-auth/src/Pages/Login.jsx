@@ -1,8 +1,8 @@
 import '@/styles/form.css'
-import logo from '@/src/assets/react.svg'
+import logo from '@/assets/react.svg'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
-import { loginUserService } from '@/Service/userService'
+import { loginUserService } from '../Service/useService'
 
 const Login = () => {
   const { register, handleSubmit, formState: { errors } } = useForm()
@@ -39,6 +39,7 @@ const Login = () => {
             placeholder='name@example.com'
             {...register('email')}
           />
+          <p>{errors.email?.message}</p>
           <label htmlFor='floatingInput'>Email address</label>
         </div>
         <div className='form-floating'>
@@ -49,6 +50,7 @@ const Login = () => {
             placeholder='Password'
             {...register('password')}
           />
+          <p>{errors.password?.message}</p>
           <label htmlFor='floatingPassword'>Password</label>
         </div>
 
