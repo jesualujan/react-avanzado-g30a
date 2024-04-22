@@ -2,13 +2,13 @@
 $menu-color: #3d3d3d;
 
 // MIXINs para reutilizar estilos 
-@mixin header-link{
+@mixin header-link {
     color: $menu-color;
     text-decoration: none;
     letter-spacing: 2px;
 }
 
-@mixin header-border($size: 2px){
+@mixin header-border($size:2px ){
     border-bottom: solid $size $menu-color;
 }
 
@@ -21,17 +21,17 @@ $menu-color: #3d3d3d;
     padding: 15px 30px;
 
     &__logo {
-       @include header-link;
-    }
+        @include header-link;
+     }
+ 
+     &__nav-list {
+         display: flex;
+         list-style: none;
+         column-gap: 20px;
+         flex-wrap: wrap;
+     }
 
-    &__nav-list {
-        display: flex;
-        list-style: none;
-        column-gap: 20px;
-        flex-wrap: wrap;
-    }
-    
-    &__item-link{
+     &__item-link{
         @include header-link;
 
         //indicamos cual es el estilo activo
@@ -42,5 +42,6 @@ $menu-color: #3d3d3d;
         &:hover{
             @include header-border;
         }
+
     }
 }
