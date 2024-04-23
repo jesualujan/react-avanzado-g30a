@@ -17,8 +17,10 @@ const registerUserService = (data) => axios.post(`${BASE_URL}/register`, data)
 const loginUserService = (data) => axios.post(`${BASE_URL}/login`, data)
 
 // información de un solo usuario
+const getMeUserService = (jwtToken) => axios.get(`${BASE_URL}/users/me`, { headers: { Authorization: `Bearer ${jwtToken}` } })
 
 export {
   registerUserService,
-  loginUserService
+  loginUserService,
+  getMeUserService
 }
