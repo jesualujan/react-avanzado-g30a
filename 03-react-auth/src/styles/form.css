@@ -1,20 +1,42 @@
-.form-sing {
-    max-width: 110px;
-    padding: 1rem;
-}
-
-.form-sing .form-sing:focus-within{
-    z-index:2;
-}
-
-.form-sing input[type="email"] {
+.form-signin {
+  margin: auto;
+  height: auto;
+  max-width: 345px;
+  padding: 1rem;
+  border: 1.2px solid #ccc; /* Added a subtle border */
+  border-radius: 4px; /* Added rounded corners for a modern look */
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
+  background-color: #f5f5f5;
+  }
+  
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+  
+  .form-signin input[type="email"] {
+    margin-top: 15px;
     margin-bottom: -1px;
-    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-}
-
-.form-sing input[type="password"] {
+  }
+  
+  .form-signin input[type="password"] {
     margin-bottom: 10px;
+    border-top-left-radius: 0;
     border-top-right-radius: 0;
-    border-bottom-left-radius: 0;
-}
+  }
+  
+  img{
+    margin-top: 10px;
+    margin-left: 100px;
+    animation: rotation 2s linear infinite;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
