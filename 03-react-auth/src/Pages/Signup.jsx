@@ -1,8 +1,9 @@
-import '@/styles/form.css'
+import '../styles/form.css'
 import logo from '@/assets/react.svg'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { registerUserService } from '@/Service/useService'
+
 const Signup = () => {
   const { register, handleSubmit, formState: { errors } } = useForm()
   const navigate = useNavigate()
