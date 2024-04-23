@@ -1,10 +1,20 @@
 .form-sing {
-    max-width: 330px;
+    max-width: 110px;
     padding: 1rem;
 }
 
-.form-sing input {
-    margin-bottom: 1px;
+.form-sing .form-sing:focus-within{
+    z-index:2;
+}
+
+.form-sing input[type="email"] {
+    margin-bottom: -1px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-sing input[type="password"] {
+    margin-bottom: 10px;
     border-top-right-radius: 0;
     border-bottom-left-radius: 0;
 }
