@@ -1,4 +1,4 @@
-import '../styles/form.css'
+import '@/styles/form.css'
 import logo from '@/assets/react.svg'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
@@ -21,7 +21,7 @@ const Signup = () => {
   }
 
   return (
-    <main className='form-signin w-100 m-auto'>
+    <main className='form-signin w-100'>
       <form onSubmit={handleSubmit(onSubmit)}>
         <img className='mb-4' src={logo} alt='' width='72' height='57' />
         <h1 className='h3 mb-3 fw-normal'>Please sign up</h1>
