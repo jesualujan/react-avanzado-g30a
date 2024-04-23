@@ -2,14 +2,17 @@ import './App.css'
 import Header from '@/Components/Header'
 import { BrowserRouter } from 'react-router-dom'
 import RoutesIndex from '@/Routes/RoutesIndex'
+import { AuthProvider } from '@/Context/AuthContext'
 
 function App () {
   return (
     <>
-      <BrowserRouter>
-        <Header />
-        <RoutesIndex />
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <Header />
+          <RoutesIndex />
+        </BrowserRouter>
+      </AuthProvider>
     </>
   )
 }
