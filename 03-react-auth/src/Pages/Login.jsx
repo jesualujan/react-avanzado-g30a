@@ -1,12 +1,14 @@
-import '@/styles/form.css'
+import '../styles/form.css'
 import logo from '@/assets/react.svg'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { loginUserService } from '@/Service/useService'
+import { useAuthContext } from '@/Hook/useAuthContext'
 
 const Login = () => {
   const { register, handleSubmit, formState: { errors } } = useForm()
   const navigate = useNavigate()
+  const { login } = useAuthContext()
 
   const onSubmit = async (data) => {
     try {
@@ -14,6 +16,7 @@ const Login = () => {
       if (response.status === 200) {
         navigate('/')
         console.log('Usuario autenticado exitosamente')
+        login(response.data.token) // utilizar login del contexto y decodificar el token en el navegador.
       }
     } catch (error) {
       console.log('Ocurrio un error en Login', error)
