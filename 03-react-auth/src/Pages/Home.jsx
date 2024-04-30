@@ -20,7 +20,7 @@ const Home = () => {
 
   return (
     <>
-      <h1>Bienvenido al Home 🏠</h1>
+      <h1>Bienvenido al Home </h1>
       <div className='d-flex flex-row flex-wrap justify-content-center'>
         {/* Si itemsData no esta vacio, recorro el arreglo con Map y creo un Card de Bootstrap para cada elemento */}
         {itemsList && itemsList.map((product) => (
